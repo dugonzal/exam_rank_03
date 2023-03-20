@@ -140,7 +140,7 @@ char *get_next_line(int fd)
 	char *line;
 	char static *str;
 
-	if (fd < 0 || BUFFER_SIZE <= 0 || (read(fd, NULL, 0) == -1))
+	if (fd < 0 || BUFFER_SIZE <= 0)
 		return (NULL);
 	str = read_line(str, fd);
 	line = get_line(str);
